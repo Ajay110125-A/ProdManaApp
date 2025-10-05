@@ -1,0 +1,4 @@
+@EndUserText.label: 'SD for Virtual Elements'
+define service ZUI_VITRUAL_ELEMENT {
+  expose ZC_VITRUAL_ELEMENT;
+}

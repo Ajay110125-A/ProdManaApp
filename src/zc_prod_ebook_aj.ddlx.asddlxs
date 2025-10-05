@@ -1,0 +1,36 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+annotate view ZC_PROD_EBOOK_AJ with
+{
+  @UI.facet: [{ id: 'Product',
+                label: 'Product Detials',
+                position: 10,
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE
+            }]
+  //    ProductUuid;
+  
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.7
+  @UI.lineItem: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{  position: 10, label: 'Product ID' }]
+  ProductId;
+  
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.7
+  @UI.lineItem: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  @UI.identification: [{  position: 20, label: 'Product Name'}]
+  Name;
+  
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.identification: [{  position: 30, label: 'Category' }]
+  Category;
+  
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{  position: 40, label: 'Creation Date' }]
+  CreationDate;
+
+}

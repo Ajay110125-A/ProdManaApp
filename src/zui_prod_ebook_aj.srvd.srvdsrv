@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service defination for Product Detials'
+define service ZUI_PROD_EBOOK_AJ {
+  expose ZC_PROD_EBOOK_AJ;
+}

@@ -1,0 +1,28 @@
+managed implementation in class zbp_i_prod_ebook_aj unique;
+strict ( 2 );
+
+define behavior for ZI_PROD_EBOOK_AJ //alias <alias_name>
+persistent table zaj_prod_ebook
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( numbering : managed, readonly ) ProductUuid;
+  field ( mandatory ) ProductId, Name;
+  field ( readonly ) CreatedBy, CrreatedAt, LastChangedBy, LastChangedAt;
+  mapping for zaj_prod_ebook
+    {
+      ProductUuid   = product_uuid;
+      ProductId     = product_id;
+      Name          = name;
+      Category      = category;
+      CreationDate  = creation_date;
+      CreatedBy     = created_by;
+      CrreatedAt    = crreated_at;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+}

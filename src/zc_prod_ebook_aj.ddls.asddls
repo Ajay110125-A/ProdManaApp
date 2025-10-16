@@ -10,5 +10,6 @@ define root view entity ZC_PROD_EBOOK_AJ
       ProductId,
       Name,
       Category,
+//      @Semantics.systemDate.createdAt: true
       CreationDate
 }
